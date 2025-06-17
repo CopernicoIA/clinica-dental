@@ -1,106 +1,192 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- HEAD COMÚN -->
+  <!-- ======= HEAD COMÚN ======= -->
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Odontoidalia | Agenda tu cita</title>
-  <meta name="description" content="Agenda tu cita en Odontoidalia, tu clínica dental en Tampico.">
-  <link rel="canonical" href="https://odontoidalia.mx/citas.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Mobile-friendly -->
+  <title>Solicita tu Cita | Odontoidalia</title>
+  <meta name="description" content="Agenda tu cita en Odontoidalia, clínica dental en Tampico. Elige fecha y hora y te contactamos.">
+  <link rel="canonical" href="https://copernicioa.github.io/clinica-dental/citas.html">
+
+  <!-- Open Graph -->
   <meta property="og:type"        content="website">
-  <meta property="og:title"       content="Odontoidalia | Agenda tu cita">
-  <meta property="og:description" content="Agenda tu cita en Odontoidalia, tu clínica dental en Tampico.">
-  <meta property="og:url"         content="https://odontoidalia.mx/citas.html">
-  <meta property="og:image"       content="https://odontoidalia.mx/assets/og-image.jpg">
+  <meta property="og:title"       content="Solicita tu Cita | Odontoidalia">
+  <meta property="og:description" content="Agenda tu cita en Odontoidalia, clínica dental en Tampico. Elige fecha y hora y te contactamos.">
+  <meta property="og:url"         content="https://copernicioa.github.io/clinica-dental/citas.html">
+  <meta property="og:image"       content="https://copernicioa.github.io/clinica-dental/assets/og-image.jpg">
+
+  <!-- Twitter Cards -->
   <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="Odontoidalia | Agenda tu cita">
-  <meta name="twitter:description" content="Agenda tu cita en Odontoidalia, tu clínica dental en Tampico.">
-  <meta name="twitter:image"       content="https://odontoidalia.mx/assets/og-image.jpg">
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org","@type":"Dentist","name":"Odontoidalia",
-    "image":"https://odontoidalia.mx/assets/logo.png","@id":"https://odontoidalia.mx/",
-    "url":"https://odontoidalia.mx/citas.html","telephone":"+528332091349",
-    "email":"dentalia1910@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Segunda avenida #1109-A, Col. Jardín 20 de Noviembre","addressLocality":"Tampico","addressRegion":"Tamaulipas","postalCode":"####","addressCountry":"MX"},
-    "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"14:00"}]
-  }
-  </script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
-  <link rel="manifest" href="/manifest.json">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://maps.gstatic.com; script-src 'self' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;">
-  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <meta name="twitter:title"       content="Solicita tu Cita | Odontoidalia">
+  <meta name="twitter:description" content="Agenda tu cita en Odontoidalia, clínica dental en Tampico. Elige fecha y hora y te contactamos.">
+  <meta name="twitter:image"       content="https://copernicioa.github.io/clinica-dental/assets/og-image.jpg">
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
-  <!-- FIN HEAD COMÚN -->
 
   <style>
-    *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
-    body{font-family:'Space Grotesk',sans-serif;background:#f3f9ff;color:#1a1a1a;}
-    header{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;background:#40E0D0;position:sticky;top:0;z-index:999;box-shadow:0 2px 8px rgba(0,0,0,0.05);}
-    .logo img{height:60px;}
-    nav{display:flex;gap:30px;}
-    nav a{text-decoration:none;color:#fff;font-weight:500;text-transform:uppercase;transition:color .3s;}
-    nav a:hover{color:#333;}
-    .hamburger{display:none;width:30px;height:30px;flex-direction:column;justify-content:space-between;cursor:pointer;}
-    .hamburger span{display:block;height:4px;background:#fff;border-radius:2px;}
-    .mobile-menu{display:none;flex-direction:column;background:#40E0D0;position:absolute;top:80px;right:40px;padding:20px;border-radius:8px;}
-    .mobile-menu a{margin-bottom:15px;color:#fff;text-decoration:none;font-weight:500;text-transform:uppercase;}
-    .mobile-menu a:last-child{margin-bottom:0;}
-    @media(max-width:768px){.hamburger{display:flex;}nav{display:none;}}
-    .hero{text-align:center;padding:80px 20px 40px;background:linear-gradient(135deg,#dbe9ff,#ffffff);}
-    .hero h1{font-size:2.8rem;color:#333;margin-bottom:10px;}
-    .hero p{font-size:1.1rem;color:#555;}
-    .formulario{max-width:600px;margin:40px auto;background:#fff;padding:40px;border-radius:20px;box-shadow:0 8px 20px rgba(0,0,0,0.07);}
-    form{display:flex;flex-direction:column;gap:20px;}
-    input,select,textarea{padding:12px;border:1px solid #ccc;border-radius:10px;font-size:1rem;}
-    input:focus,select:focus,textarea:focus{border-color:#6c63ff;outline:none;}
-    button{padding:14px;background:linear-gradient(145deg,#00b4d8,#6c63ff);color:#fff;font-size:1rem;font-weight:600;border:none;border-radius:10px;cursor:pointer;transition:transform .3s;}
-    button:hover{transform:scale(1.05);}
-    footer{background:#f8f9fa;text-align:center;padding:30px;font-size:.9rem;color:#666;margin-top:60px;}
-    .chat-float{position:fixed;bottom:20px;right:20px;width:120px;height:120px;background:linear-gradient(145deg,#00b4d8,#6c63ff);border-radius:50%;display:flex;justify-content:center;align-items:center;box-shadow:0 6px 15px rgba(0,0,0,0.2);transition:transform .3s;z-index:999;}
-    .chat-float:hover{transform:scale(1.05);} .chat-float img{width:120px;height:120px;}
+    /* Reset & global */
+    * { margin:0; padding:0; box-sizing:border-box; scroll-behavior:smooth; }
+    body { font-family:'Space Grotesk',sans-serif; background:#f3f9ff; color:#1a1a1a; line-height:1.5; }
+
+    /* Header */
+    header {
+      position: relative;
+      display:flex; align-items:center; justify-content:space-between;
+      padding:16px 24px; background:#40E0D0; z-index:999;
+    }
+    .logo img { height:48px; }
+
+    /* Navegación escritorio */
+    .desktop-menu { display:flex; gap:24px; }
+    .desktop-menu a {
+      color:#fff; text-transform:uppercase; text-decoration:none;
+      font-weight:500; font-size:.9rem;
+    }
+
+    /* Toggle móvil (checkbox oculto) */
+    #menu-toggle {
+      position:absolute; width:1px; height:1px; margin:-1px; padding:0;
+      clip:rect(0 0 0 0); overflow:hidden; white-space:nowrap;
+    }
+    .hamburger {
+      display:none; width:28px; height:28px;
+      flex-direction:column; justify-content:space-between; cursor:pointer;
+    }
+    .hamburger span {
+      display:block; height:3px; background:#fff; border-radius:2px;
+    }
+
+    /* Menú móvil */
+    .mobile-menu {
+      display:none; flex-direction:column; background:#40E0D0;
+      position:absolute; top:100%; left:0; width:100%; padding:16px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    }
+    .mobile-menu a {
+      display:block; margin-bottom:12px;
+      color:#fff; text-transform:uppercase; text-decoration:none;
+      font-weight:500; font-size:1rem;
+    }
+    .mobile-menu a:last-child { margin-bottom:0; }
+
+    /* Mostrar/ocultar móvil */
+    #menu-toggle:checked ~ .mobile-menu { display:flex; }
+
+    /* Responsividad */
+    @media (max-width:768px) {
+      .desktop-menu { display:none; }
+      .hamburger   { display:flex; }
+    }
+
+    /* Main - formulario de cita */
+    main {
+      max-width:600px; margin:32px auto; padding:0 16px;
+    }
+    #citas-header {
+      text-align:center; margin-bottom:24px;
+    }
+    #citas-header h1 {
+      font-size:2rem; color:#6c63ff;
+    }
+    form {
+      background:#fff; padding:24px; border-radius:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.07); display:flex;
+      flex-direction:column; gap:16px;
+    }
+    form label {
+      font-weight:500; margin-bottom:4px; color:#333;
+    }
+    form input, form select, form textarea {
+      padding:12px; border:1px solid #ccc; border-radius:8px;
+      font-size:1rem;
+    }
+    form input:focus, form select:focus, form textarea:focus {
+      outline:none; border-color:#6c63ff;
+    }
+    form button {
+      padding:12px; background:linear-gradient(145deg,#00b4d8,#6c63ff);
+      color:#fff; font-weight:600; border:none; border-radius:30px;
+      cursor:pointer; font-size:1rem; transition:transform .3s;
+    }
+    form button:hover { transform:scale(1.05); }
+
+    /* Footer */
+    footer {
+      background:#f8f9fa; text-align:center; padding:24px 16px;
+      font-size:.85rem; color:#666; margin-top:32px;
+    }
+
+    /* Chat flotante */
+    .chat-float {
+      position:fixed; bottom:16px; right:16px;
+      width:60px; height:60px;
+      background:linear-gradient(145deg,#00b4d8,#6c63ff);
+      border-radius:50%; display:flex; justify-content:center; align-items:center;
+      box-shadow:0 4px 12px rgba(0,0,0,0.2); transition:transform .3s; z-index:999;
+    }
+    .chat-float:hover { transform:scale(1.1); }
+    .chat-float img { width:32px; height:32px; }
   </style>
 </head>
 <body>
   <header role="banner">
     <div class="logo"><img src="assets/logo.png" alt="Odontoidalia"></div>
-    <nav role="navigation">
+
+    <!-- Toggle móvil -->
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger" aria-label="Alternar menú">
+      <span></span><span></span><span></span>
+    </label>
+
+    <!-- Navegación escritorio -->
+    <nav class="desktop-menu" role="navigation">
       <a href="servicios.html">SERVICIOS</a>
       <a href="blog.html">BLOG</a>
       <a href="index.html">INICIO</a>
       <a href="contacto.html">CONTACTO</a>
       <a href="citas.html" class="cta">SOLICITA CITA</a>
     </nav>
-    <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
-    <div class="mobile-menu" id="mobileMenu">
+
+    <!-- Navegación móvil -->
+    <nav class="mobile-menu" role="menu">
       <a href="servicios.html">SERVICIOS</a>
       <a href="blog.html">BLOG</a>
       <a href="index.html">INICIO</a>
       <a href="contacto.html">CONTACTO</a>
       <a href="citas.html" class="cta">SOLICITA CITA</a>
-    </div>
+    </nav>
   </header>
 
-  <main role="main">
-    <section class="hero">
-      <h1>Agenda tu Cita</h1>
-      <p>Completa el formulario y nuestro equipo se pondrá en contacto contigo.</p>
+  <main>
+    <section id="citas-header">
+      <h1>Solicita tu Cita</h1>
+      <p>Elige día y hora, y nos pondremos en contacto contigo.</p>
     </section>
-    <div class="formulario">
-      <form action="mailto:dentalia1910@gmail.com" method="post" enctype="text/plain">
-        <input type="text" name="nombre" placeholder="Tu nombre completo" required>
-        <input type="tel" name="telefono" placeholder="Teléfono de contacto" required>
-        <input type="email" name="email" placeholder="Correo electrónico" required>
-        <input type="date" name="fecha" required>
-        <input type="time" name="hora" required>
-        <select name="servicio" required>
-          <option value="">Selecciona un servicio</option>
-          <option value="odontologia_general">Odontología General</option>
-        </select>
-        <textarea name="mensaje" placeholder="Comentarios adicionales (opcional)" rows="4"></textarea>
-        <button type="submit">Enviar cita</button>
-      </form>
-    </div>
+
+    <form action="mailto:dentalia1910@gmail.com" method="post" enctype="text/plain">
+      <div>
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="nombre" required>
+      </div>
+      <div>
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div>
+        <label for="fecha">Fecha de la cita</label>
+        <input type="date" id="fecha" name="fecha" required>
+      </div>
+      <div>
+        <label for="hora">Hora aproximada</label>
+        <input type="time" id="hora" name="hora" required>
+      </div>
+      <div>
+        <label for="mensaje">Comentarios</label>
+        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Indica si es tu primera visita..." ></textarea>
+      </div>
+      <button type="submit">Enviar Solicitud</button>
+    </form>
   </main>
 
   <footer role="contentinfo">
@@ -108,15 +194,8 @@
     <p>Segunda avenida #1109-A, Col. Jardín 20 de Noviembre · dentalia1910@gmail.com · +52 833 209 1349</p>
   </footer>
 
-  <a href="https://wa.me/528332091349?text=Hola!%20Quiero%20agendar%20una%20cita" class="chat-float" target="_blank">
-    <img src="assets/chat-icon.png" alt="Chat" loading="lazy">
+  <a href="https://wa.me/528332091349?text=Hola%20quiero%20una%20cita" class="chat-float" target="_blank">
+    <img src="assets/chat-icon.png" alt="Chat">
   </a>
-
-  <script>
-    function toggleMenu(){
-      const m=document.getElementById('mobileMenu');
-      m.style.display=m.style.display==='flex'?'none':'flex';
-    }
-  </script>
 </body>
 </html>
