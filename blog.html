@@ -1,94 +1,171 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- HEAD COMÚN -->
+  <!-- ======= HEAD COMÚN ======= -->
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Mobile-friendly -->
   <title>Blog | Odontoidalia</title>
-  <meta name="description" content="Blog de Odontoidalia: consejos y artículos sobre salud dental.">
-  <link rel="canonical" href="https://odontoidalia.mx/blog.html">
+  <meta name="description" content="Entradas de blog de Odontoidalia: consejos y novedades en odontología.">
+  <link rel="canonical" href="https://copernicioa.github.io/clinica-dental/blog.html">
+
+  <!-- Open Graph -->
   <meta property="og:type"        content="website">
   <meta property="og:title"       content="Blog | Odontoidalia">
-  <meta property="og:description" content="Blog de Odontoidalia: consejos y artículos sobre salud dental.">
-  <meta property="og:url"         content="https://odontoidalia.mx/blog.html">
-  <meta property="og:image"       content="https://odontoidalia.mx/assets/og-image.jpg">
+  <meta property="og:description" content="Entradas de blog de Odontoidalia: consejos y novedades en odontología.">
+  <meta property="og:url"         content="https://copernicioa.github.io/clinica-dental/blog.html">
+  <meta property="og:image"       content="https://copernicioa.github.io/clinica-dental/assets/og-image.jpg">
+
+  <!-- Twitter Cards -->
   <meta name="twitter:card"        content="summary_large_image">
   <meta name="twitter:title"       content="Blog | Odontoidalia">
-  <meta name="twitter:description" content="Blog de Odontoidalia: consejos y artículos sobre salud dental.">
-  <meta name="twitter:image"       content="https://odontoidalia.mx/assets/og-image.jpg">
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org","@type":"Dentist","name":"Odontoidalia",
-    "image":"https://odontoidalia.mx/assets/logo.png","@id":"https://odontoidalia.mx/",
-    "url":"https://odontoidalia.mx/blog.html","telephone":"+528332091349",
-    "email":"dentalia1910@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Segunda avenida #1109-A, Col. Jardín 20 de Noviembre","addressLocality":"Tampico","addressRegion":"Tamaulipas","postalCode":"####","addressCountry":"MX"},
-    "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"14:00"}]
-  }
-  </script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
-  <link rel="manifest" href="/manifest.json">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://maps.gstatic.com; script-src 'self' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;">
-  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <meta name="twitter:description" content="Entradas de blog de Odontoidalia: consejos y novedades en odontología.">
+  <meta name="twitter:image"       content="https://copernicioa.github.io/clinica-dental/assets/og-image.jpg">
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
-  <!-- FIN HEAD COMÚN -->
 
   <style>
-    *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
-    body{font-family:'Space Grotesk',sans-serif;background:#f3f9ff;color:#1a1a1a;}
-    header{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;background:#40E0D0;position:sticky;top:0;z-index:999;box-shadow:0 2px 8px rgba(0,0,0,0.05);}
-    .logo img{height:60px;}
-    nav{display:flex;gap:30px;}
-    nav a{text-decoration:none;color:#fff;font-weight:500;text-transform:uppercase;transition:color .3s;}
-    nav a:hover{color:#333;}
-    .hamburger{display:none;width:30px;height:30px;flex-direction:column;justify-content:space-between;cursor:pointer;}
-    .hamburger span{display:block;height:4px;background:#fff;border-radius:2px;}
-    .mobile-menu{display:none;flex-direction:column;background:#40E0D0;position:absolute;top:80px;right:40px;padding:20px;border-radius:8px;}
-    .mobile-menu a{margin-bottom:15px;color:#fff;text-decoration:none;font-weight:500;text-transform:uppercase;}
-    .mobile-menu a:last-child{margin-bottom:0;}
-    @media(max-width:768px){.hamburger{display:flex;}nav{display:none;}}
-    .hero{text-align:center;padding:80px 20px 40px;background:linear-gradient(135deg,#dbe9ff,#fff);}
-    .hero h1{font-size:2.6rem;color:#333;}
-    .hero p{font-size:1.1rem;color:#555;margin-top:10px;}
-    .blog{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;max-width:1200px;margin:40px auto;padding:0 20px;}
-    .post{background:#fff;border-radius:20px;box-shadow:0 8px 20px rgba(0,0,0,0.07);overflow:hidden;transition:transform .3s;}
-    .post:hover{transform:translateY(-5px);}
-    .post img{width:100%;height:180px;object-fit:cover;}
-    .post-content{padding:20px;}
-    .post-content h3{font-size:1.3rem;margin-bottom:10px;color:#6c63ff;}
-    .post-content p{font-size:.95rem;color:#555;}
-    footer{background:#f8f9fa;text-align:center;padding:30px;font-size:.9rem;color:#666;margin-top:60px;}
-    .chat-float{position:fixed;bottom:20px;right:20px;width:120px;height:120px;background:linear-gradient(145deg,#00b4d8,#6c63ff);border-radius:50%;display:flex;justify-content:center;align-items:center;box-shadow:0 6px 15px rgba(0,0,0,0.2);transition:transform .3s;z-index:999;}
-    .chat-float:hover{transform:scale(1.05);} .chat-float img{width:120px;height:120px;}
+    /* Reset & global */
+    * { margin:0; padding:0; box-sizing:border-box; scroll-behavior:smooth; }
+    body { font-family:'Space Grotesk',sans-serif; background:#f3f9ff; color:#1a1a1a; line-height:1.5; }
+
+    /* Header */
+    header {
+      position: relative;
+      display:flex; align-items:center; justify-content:space-between;
+      padding:16px 24px; background:#40E0D0; z-index:999;
+    }
+    .logo img { height:48px; }
+
+    /* Navegación escritorio */
+    .desktop-menu { display:flex; gap:24px; }
+    .desktop-menu a {
+      color:#fff; text-transform:uppercase; text-decoration:none; font-weight:500; font-size:.9rem;
+    }
+
+    /* Toggle móvil (checkbox oculto) */
+    #menu-toggle {
+      position:absolute; width:1px; height:1px; margin:-1px; padding:0;
+      clip:rect(0 0 0 0); overflow:hidden; white-space:nowrap;
+    }
+    .hamburger {
+      display:none; width:28px; height:28px;
+      flex-direction:column; justify-content:space-between; cursor:pointer;
+    }
+    .hamburger span {
+      display:block; height:3px; background:#fff; border-radius:2px;
+    }
+
+    /* Menú móvil */
+    .mobile-menu {
+      display:none; flex-direction:column; background:#40E0D0;
+      position:absolute; top:100%; left:0; width:100%; padding:16px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    }
+    .mobile-menu a {
+      display:block; margin-bottom:12px;
+      color:#fff; text-transform:uppercase; text-decoration:none; font-weight:500; font-size:1rem;
+    }
+    .mobile-menu a:last-child { margin-bottom:0; }
+
+    /* Mostrar/ocultar menú móvil */
+    #menu-toggle:checked ~ .mobile-menu { display:flex; }
+
+    /* Responsividad */
+    @media (max-width:768px) {
+      .desktop-menu { display:none; }
+      .hamburger   { display:flex; }
+    }
+
+    /* Contenido blog */
+    main {
+      max-width:800px; margin:32px auto; padding:0 16px;
+    }
+    #blog-header {
+      text-align:center; margin-bottom:32px;
+    }
+    #blog-header h1 {
+      font-size:2rem; color:#6c63ff;
+    }
+    .post-card {
+      background:#fff; padding:24px; border-radius:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.07); margin-bottom:24px;
+    }
+    .post-card h2 {
+      font-size:1.4rem; margin-bottom:12px;
+    }
+    .post-card p {
+      font-size:1rem; color:#555; margin-bottom:16px;
+    }
+    .post-card a {
+      text-decoration:none; color:#00b4d8; font-weight:600;
+    }
+
+    /* Footer */
+    footer {
+      background:#f8f9fa; text-align:center; padding:24px 16px;
+      font-size:.85rem; color:#666; margin-top:32px;
+    }
+
+    /* Chat flotante */
+    .chat-float {
+      position:fixed; bottom:16px; right:16px;
+      width:60px; height:60px;
+      background:linear-gradient(145deg,#00b4d8,#6c63ff);
+      border-radius:50%; display:flex; justify-content:center; align-items:center;
+      box-shadow:0 4px 12px rgba(0,0,0,0.2); transition:transform .3s; z-index:999;
+    }
+    .chat-float:hover { transform:scale(1.1); }
+    .chat-float img { width:32px; height:32px; }
   </style>
 </head>
 <body>
   <header role="banner">
     <div class="logo"><img src="assets/logo.png" alt="Odontoidalia"></div>
-    <nav role="navigation">
+
+    <!-- Toggle móvil -->
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger" aria-label="Alternar menú">
+      <span></span><span></span><span></span>
+    </label>
+
+    <!-- Navegación escritorio -->
+    <nav class="desktop-menu" role="navigation">
       <a href="servicios.html">SERVICIOS</a>
       <a href="blog.html">BLOG</a>
       <a href="index.html">INICIO</a>
       <a href="contacto.html">CONTACTO</a>
       <a href="citas.html" class="cta">SOLICITA CITA</a>
     </nav>
-    <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
-    <div class="mobile-menu" id="mobileMenu">
+
+    <!-- Navegación móvil -->
+    <nav class="mobile-menu" role="menu">
       <a href="servicios.html">SERVICIOS</a>
       <a href="blog.html">BLOG</a>
       <a href="index.html">INICIO</a>
       <a href="contacto.html">CONTACTO</a>
       <a href="citas.html" class="cta">SOLICITA CITA</a>
-    </div>
+    </nav>
   </header>
 
   <main role="main">
-    <section class="hero"><h1>Blog Odontoidalia</h1><p>Consejos y novedades para cuidar tu sonrisa</p></section>
-    <section class="blog">
-      <div class="post"><img src="assets/blog-odontologia.jpg" alt="Odontología General" loading="lazy"><div class="post-content"><h3>Importancia de la Odontología General</h3><p>Revisiones periódicas para prevenir enfermedades y mantener tu sonrisa.</p></div></div>
-      <div class="post"><img src="assets/blog-higiene.jpg" alt="Higiene Dental" loading="lazy"><div class="post-content"><h3>Hábitos de Higiene Dental</h3><p>Consejos para cuidar tus dientes y encías en casa.</p></div></div>
-      <div class="post"><img src="assets/blog-estetica.jpg" alt="Estética Dental" loading="lazy"><div class="post-content"><h3>Tendencias en Estética Dental</h3><p>Innovaciones en carillas y blanqueamientos.</p></div></div>
+    <section id="blog-header">
+      <h1>Nuestro Blog</h1>
+      <p>Consejos y novedades para tu salud dental</p>
     </section>
+
+    <!-- Ejemplo de entrada -->
+    <article class="post-card">
+      <h2>🦷 Cómo cuidar tu cepillo de dientes</h2>
+      <p>Descubre las mejores prácticas para mantener tu cepillo limpio y libre de bacterias.</p>
+      <a href="blog/cepillo-cuidado.html">Leer más →</a>
+    </article>
+
+    <article class="post-card">
+      <h2>🪥 Importancia del hilo dental</h2>
+      <p>Te explicamos por qué el hilo dental es clave en tu rutina diaria de higiene oral.</p>
+      <a href="blog/hilo-dental.html">Leer más →</a>
+    </article>
   </main>
 
   <footer role="contentinfo">
@@ -96,15 +173,8 @@
     <p>Segunda avenida #1109-A, Col. Jardín 20 de Noviembre · dentalia1910@gmail.com · +52 833 209 1349</p>
   </footer>
 
-  <a href="https://wa.me/528332091349?text=Hola!%20Quiero%20agendar%20una%20cita" class="chat-float" target="_blank">
+  <a href="https://wa.me/528332091349?text=Hola%20quiero%20una%20cita" class="chat-float" target="_blank">
     <img src="assets/chat-icon.png" alt="Chat" loading="lazy">
   </a>
-
-  <script>
-    function toggleMenu(){
-      const m=document.getElementById('mobileMenu');
-      m.style.display=m.style.display==='flex'?'none':'flex';
-    }
-  </script>
 </body>
 </html>
