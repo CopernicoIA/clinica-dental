@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- HEAD COMÚN -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosotros | Odontoidalia</title>
+  <meta name="description" content="Conoce a la Dra. Idalia Aguilar Rocha y nuestros valores en Odontoidalia.">
+  <link rel="canonical" href="https://odontoidalia.mx/nosotros.html">
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Nosotros | Odontoidalia">
+  <meta property="og:description" content="Conoce a la Dra. Idalia Aguilar Rocha y nuestros valores en Odontoidalia.">
+  <meta property="og:url"         content="https://odontoidalia.mx/nosotros.html">
+  <meta property="og:image"       content="https://odontoidalia.mx/assets/og-image.jpg">
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Nosotros | Odontoidalia">
+  <meta name="twitter:description" content="Conoce a la Dra. Idalia Aguilar Rocha y nuestros valores en Odontoidalia.">
+  <meta name="twitter:image"       content="https://odontoidalia.mx/assets/og-image.jpg">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org","@type":"Dentist","name":"Odontoidalia",
+    "image":"https://odontoidalia.mx/assets/logo.png","@id":"https://odontoidalia.mx/",
+    "url":"https://odontoidalia.mx/nosotros.html","telephone":"+528332091349",
+    "email":"dentalia1910@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Segunda avenida #1109-A, Col. Jardín 20 de Noviembre","addressLocality":"Tampico","addressRegion":"Tamaulipas","postalCode":"####","addressCountry":"MX"},
+    "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"14:00"}]
+  }
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+  <link rel="manifest" href="/manifest.json">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://maps.gstatic.com; script-src 'self' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+  <!-- FIN HEAD COMÚN -->
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
+    body{font-family:'Space Grotesk',sans-serif;background:#eef6fb;color:#1a1a1a;}
+    header{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;background:#40E0D0;position:sticky;top:0;z-index:999;box-shadow:0 2px 8px rgba(0,0,0,0.05);}
+    .logo img{height:60px;}
+    nav{display:flex;gap:30px;}
+    nav a{text-decoration:none;color:#fff;font-weight:500;text-transform:uppercase;transition:color .3s;}
+    nav a:hover{color:#333;}
+    .hamburger{display:none;width:30px;height:30px;flex-direction:column;justify-content:space-between;cursor:pointer;}
+    .hamburger span{display:block;height:4px;background:#fff;border-radius:2px;}
+    .mobile-menu{display:none;flex-direction:column;background:#40E0D0;position:absolute;top:80px;right:40px;padding:20px;border-radius:8px;}
+    .mobile-menu a{margin-bottom:15px;color:#fff;text-decoration:none;font-weight:500;text-transform:uppercase;}
+    .mobile-menu a:last-child{margin-bottom:0;}
+    .hero-nosotros{background:linear-gradient(135deg,#d0f4ff,#eefaff);padding:80px 20px;text-align:center;}
+    .hero-nosotros h1{font-size:2.8rem;color:#006d77;margin-bottom:10px;}
+    .hero-nosotros p{font-size:1.1rem;color:#333;max-width:800px;margin:auto;line-height:1.6;}
+    .valores{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;max-width:1200px;margin:60px auto;padding:0 20px;}
+    .valor-card{background:#fff;border-radius:20px;box-shadow:0 8px 20px rgba(0,0,0,0.07);padding:30px;text-align:center;transition:transform .3s;}
+    .valor-card:hover{transform:translateY(-6px);}
+    .valor-card span{font-size:2.5rem;display:block;margin-bottom:15px;}
+    .valor-card h3{font-size:1.3rem;color:#006d77;margin-bottom:10px;}
+    .valor-card p{font-size:1rem;color:#555;line-height:1.5;}
+    .equipo{max-width:800px;margin:60px auto;background:#fff;border-radius:20px;box-shadow:0 8px 20px rgba(0,0,0,0.07);padding:40px 20px;text-align:center;}
+    .equipo h2{font-size:2rem;color:#006d77;margin-bottom:20px;}
+    .equipo p{font-size:1.1rem;color:#333;line-height:1.6;margin-bottom:30px;}
+    .equipo-card{background:#eefaff;border-radius:15px;padding:20px;display:inline-block;}
+    .equipo-card h3{font-size:1.4rem;color:#006d77;margin-bottom:5px;}
+    .equipo-card p{font-size:1rem;color:#555;}
+    .cta-center{text-align:center;margin:40px 0;}
+    .cta{display:inline-block;text-decoration:none;background:linear-gradient(145deg,#00b4d8,#6c63ff);color:#fff;padding:14px 30px;border-radius:30px;font-weight:600;transition:transform .3s;}
+    .cta:hover{transform:scale(1.05);}
+    footer{background:#f8f9fa;text-align:center;padding:30px;font-size:.9rem;color:#666;margin-top:60px;}
+    .chat-float{position:fixed;bottom:20px;right:20px;width:120px;height:120px;background:linear-gradient(145deg,#00b4d8,#6c63ff);border-radius:50%;display:flex;justify-content:center;align-items:center;box-shadow:0 6px 15px rgba(0,0,0,0.2);transition:transform .3s;z-index:999;}
+    .chat-float:hover{transform:scale(1.05);} .chat-float img{width:120px;height:120px;}
+    @media(max-width:768px){.hamburger{display:flex;}nav{display:none;}}
+  </style>
+</head>
+<body>
+  <header role="banner">
+    <div class="logo"><img src="assets/logo.png" alt="Odontoidalia"></div>
+    <nav role="navigation">
+      <a href="servicios.html">SERVICIOS</a>
+      <a href="blog.html">BLOG</a>
+      <a href="index.html">INICIO</a>
+      <a href="contacto.html">CONTACTO</a>
+      <a href="citas.html" class="cta">SOLICITA CITA</a>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="servicios.html">SERVICIOS</a>
+      <a href="blog.html">BLOG</a>
+      <a href="index.html">INICIO</a>
+      <a href="contacto.html">CONTACTO</a>
+      <a href="citas.html" class="cta">SOLICITA CITA</a>
+    </div>
+  </header>
+
+  <main role="main">
+    <section class="hero-nosotros">
+      <h1>Sobre Odontoidalia</h1>
+      <p>En Odontoidalia nos enfocamos en ofrecer una experiencia dental excepcional combinando tecnología de punta, tratamientos personalizados y un trato cercano.</p>
+    </section>
+
+    <section class="valores">
+      <div class="valor-card"><span>🤝</span><h3>Confianza</h3><p>Relaciones basadas en honestidad y transparencia.</p></div>
+      <div class="valor-card"><span>⚙️</span><h3>Tecnología</h3><p>Equipos de última generación para diagnósticos precisos.</p></div>
+      <div class="valor-card"><span>💖</span><h3>Calidez</h3><p>Atención humana y cercana en cada detalle.</p></div>
+    </section>
+
+    <section class="equipo">
+      <h2>Nuestro Equipo</h2>
+      <p>Dirigido por la Dra. Idalia Aguilar Rocha, especialista en odontología general con más de 10 años de experiencia.</p>
+      <div class="equipo-card"><h3>Dra. Idalia Aguilar Rocha</h3><p>Odontología General</p></div>
+    </section>
+
+    <div class="cta-center">
+      <a href="citas.html" class="cta">Agendar mi cita</a>
+    </div>
+  </main>
+
+  <footer role="contentinfo">
+    <p>© 2025 Odontoidalia | Tampico, México</p>
+    <p>Segunda avenida #1109-A, Col. Jardín 20 de Noviembre · dentalia1910@gmail.com · +52 833 209 1349</p>
+  </footer>
+
+  <a href="https://wa.me/528332091349?text=Hola!%20Quiero%20agendar%20una%20cita" class="chat-float" target="_blank">
+    <img src="assets/chat-icon.png" alt="Chat" loading="lazy">
+  </a>
+
+  <script>
+    function toggleMenu(){
+      const m=document.getElementById('mobileMenu');
+      m.style.display=m.style.display==='flex'?'none':'flex';
+    }
+  </script>
+</body>
+</html>

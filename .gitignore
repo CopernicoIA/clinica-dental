@@ -1,0 +1,9 @@
+# macOS
+.DS_Store
+
+# Logs y dependencias (por si usas Node u otro)
+node_modules/
+npm-debug.log
+
+# Variables de entorno
+.env

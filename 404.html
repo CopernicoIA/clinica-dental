@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Error 404 | Página no encontrada</title>
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Space Grotesk', sans-serif;
+      background: linear-gradient(135deg, #eef4ff, #f3f9ff);
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
+    }
+    h1 {
+      font-size: 8rem;
+      color: #6c63ff;
+      margin: 0;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-top: 10px;
+    }
+    p {
+      margin: 20px 0;
+      font-size: 1rem;
+      color: #555;
+    }
+    a {
+      text-decoration: none;
+      background: linear-gradient(145deg, #00b4d8, #6c63ff);
+      color: white;
+      padding: 14px 30px;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    a:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(108,99,255,0.3);
+    }
+    .glow {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(108,99,255,0.15), transparent 70%);
+      border-radius: 50%;
+      filter: blur(50px);
+      z-index: -1;
+    }
+    footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+      background-color: #f8f9fa;
+      color: #666;
+      font-size: 0.9rem;
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+      width: 70px;
+      height: 70px;
+      background: #25d366;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+    .whatsapp-float img {
+      width: 60px;
+      height: 60px;
+    }
+  </style>
+</head>
+<body>
+  <div class="glow"></div>
+  <h1>404</h1>
+  <h2>Página no encontrada</h2>
+  <p>Lo sentimos, la página que buscas no existe o ha sido movida.</p>
+  <a href="index.html">Volver al inicio</a>
+  <footer>
+    <p>© 2025 Clínica Dental Futurista | Tampico, México</p>
+    <p>Av. Hidalgo 1234 · contacto@clinicafuturista.mx · +52 834 123 4567</p>
+  </footer>
+  <!-- Botón flotante de WhatsApp con GIF -->
+  <a href="https://wa.me/5218341234567?text=Hola!%20Quiero%20agendar%20una%20cita%20dental" 
+     class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    <img src="assets/whatsapp-icon.gif" alt="WhatsApp" />
+  </a>
+</body>
+</html>

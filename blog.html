@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- HEAD COMÚN -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Odontoidalia</title>
+  <meta name="description" content="Blog de Odontoidalia: consejos y artículos sobre salud dental.">
+  <link rel="canonical" href="https://odontoidalia.mx/blog.html">
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Blog | Odontoidalia">
+  <meta property="og:description" content="Blog de Odontoidalia: consejos y artículos sobre salud dental.">
+  <meta property="og:url"         content="https://odontoidalia.mx/blog.html">
+  <meta property="og:image"       content="https://odontoidalia.mx/assets/og-image.jpg">
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Blog | Odontoidalia">
+  <meta name="twitter:description" content="Blog de Odontoidalia: consejos y artículos sobre salud dental.">
+  <meta name="twitter:image"       content="https://odontoidalia.mx/assets/og-image.jpg">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org","@type":"Dentist","name":"Odontoidalia",
+    "image":"https://odontoidalia.mx/assets/logo.png","@id":"https://odontoidalia.mx/",
+    "url":"https://odontoidalia.mx/blog.html","telephone":"+528332091349",
+    "email":"dentalia1910@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Segunda avenida #1109-A, Col. Jardín 20 de Noviembre","addressLocality":"Tampico","addressRegion":"Tamaulipas","postalCode":"####","addressCountry":"MX"},
+    "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"14:00"}]
+  }
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+  <link rel="manifest" href="/manifest.json">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://maps.gstatic.com; script-src 'self' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+  <!-- FIN HEAD COMÚN -->
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
+    body{font-family:'Space Grotesk',sans-serif;background:#f3f9ff;color:#1a1a1a;}
+    header{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;background:#40E0D0;position:sticky;top:0;z-index:999;box-shadow:0 2px 8px rgba(0,0,0,0.05);}
+    .logo img{height:60px;}
+    nav{display:flex;gap:30px;}
+    nav a{text-decoration:none;color:#fff;font-weight:500;text-transform:uppercase;transition:color .3s;}
+    nav a:hover{color:#333;}
+    .hamburger{display:none;width:30px;height:30px;flex-direction:column;justify-content:space-between;cursor:pointer;}
+    .hamburger span{display:block;height:4px;background:#fff;border-radius:2px;}
+    .mobile-menu{display:none;flex-direction:column;background:#40E0D0;position:absolute;top:80px;right:40px;padding:20px;border-radius:8px;}
+    .mobile-menu a{margin-bottom:15px;color:#fff;text-decoration:none;font-weight:500;text-transform:uppercase;}
+    .mobile-menu a:last-child{margin-bottom:0;}
+    @media(max-width:768px){.hamburger{display:flex;}nav{display:none;}}
+    .hero{text-align:center;padding:80px 20px 40px;background:linear-gradient(135deg,#dbe9ff,#fff);}
+    .hero h1{font-size:2.6rem;color:#333;}
+    .hero p{font-size:1.1rem;color:#555;margin-top:10px;}
+    .blog{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;max-width:1200px;margin:40px auto;padding:0 20px;}
+    .post{background:#fff;border-radius:20px;box-shadow:0 8px 20px rgba(0,0,0,0.07);overflow:hidden;transition:transform .3s;}
+    .post:hover{transform:translateY(-5px);}
+    .post img{width:100%;height:180px;object-fit:cover;}
+    .post-content{padding:20px;}
+    .post-content h3{font-size:1.3rem;margin-bottom:10px;color:#6c63ff;}
+    .post-content p{font-size:.95rem;color:#555;}
+    footer{background:#f8f9fa;text-align:center;padding:30px;font-size:.9rem;color:#666;margin-top:60px;}
+    .chat-float{position:fixed;bottom:20px;right:20px;width:120px;height:120px;background:linear-gradient(145deg,#00b4d8,#6c63ff);border-radius:50%;display:flex;justify-content:center;align-items:center;box-shadow:0 6px 15px rgba(0,0,0,0.2);transition:transform .3s;z-index:999;}
+    .chat-float:hover{transform:scale(1.05);} .chat-float img{width:120px;height:120px;}
+  </style>
+</head>
+<body>
+  <header role="banner">
+    <div class="logo"><img src="assets/logo.png" alt="Odontoidalia"></div>
+    <nav role="navigation">
+      <a href="servicios.html">SERVICIOS</a>
+      <a href="blog.html">BLOG</a>
+      <a href="index.html">INICIO</a>
+      <a href="contacto.html">CONTACTO</a>
+      <a href="citas.html" class="cta">SOLICITA CITA</a>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="servicios.html">SERVICIOS</a>
+      <a href="blog.html">BLOG</a>
+      <a href="index.html">INICIO</a>
+      <a href="contacto.html">CONTACTO</a>
+      <a href="citas.html" class="cta">SOLICITA CITA</a>
+    </div>
+  </header>
+
+  <main role="main">
+    <section class="hero"><h1>Blog Odontoidalia</h1><p>Consejos y novedades para cuidar tu sonrisa</p></section>
+    <section class="blog">
+      <div class="post"><img src="assets/blog-odontologia.jpg" alt="Odontología General" loading="lazy"><div class="post-content"><h3>Importancia de la Odontología General</h3><p>Revisiones periódicas para prevenir enfermedades y mantener tu sonrisa.</p></div></div>
+      <div class="post"><img src="assets/blog-higiene.jpg" alt="Higiene Dental" loading="lazy"><div class="post-content"><h3>Hábitos de Higiene Dental</h3><p>Consejos para cuidar tus dientes y encías en casa.</p></div></div>
+      <div class="post"><img src="assets/blog-estetica.jpg" alt="Estética Dental" loading="lazy"><div class="post-content"><h3>Tendencias en Estética Dental</h3><p>Innovaciones en carillas y blanqueamientos.</p></div></div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>© 2025 Odontoidalia | Tampico, México</p>
+    <p>Segunda avenida #1109-A, Col. Jardín 20 de Noviembre · dentalia1910@gmail.com · +52 833 209 1349</p>
+  </footer>
+
+  <a href="https://wa.me/528332091349?text=Hola!%20Quiero%20agendar%20una%20cita" class="chat-float" target="_blank">
+    <img src="assets/chat-icon.png" alt="Chat" loading="lazy">
+  </a>
+
+  <script>
+    function toggleMenu(){
+      const m=document.getElementById('mobileMenu');
+      m.style.display=m.style.display==='flex'?'none':'flex';
+    }
+  </script>
+</body>
+</html>
