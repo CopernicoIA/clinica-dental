@@ -5,20 +5,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Mobile-friendly -->
   <title>Solicita tu Cita | Odontoidalia</title>
-  <meta name="description" content="Agenda tu cita en Odontoidalia, clínica dental en Tampico. Elige fecha y hora y te contactamos.">
+  <meta name="description" content="Agenda tu cita en Odontoidalia, clínica dental en Tampico. Selecciona día y hora directamente.">
   <link rel="canonical" href="https://copernicioa.github.io/clinica-dental/citas.html">
 
   <!-- Open Graph -->
   <meta property="og:type"        content="website">
   <meta property="og:title"       content="Solicita tu Cita | Odontoidalia">
-  <meta property="og:description" content="Agenda tu cita en Odontoidalia, clínica dental en Tampico. Elige fecha y hora y te contactamos.">
+  <meta property="og:description" content="Agenda tu cita en Odontoidalia, clínica dental en Tampico. Selecciona día y hora directamente.">
   <meta property="og:url"         content="https://copernicioa.github.io/clinica-dental/citas.html">
   <meta property="og:image"       content="https://copernicioa.github.io/clinica-dental/assets/og-image.jpg">
 
   <!-- Twitter Cards -->
   <meta name="twitter:card"        content="summary_large_image">
   <meta name="twitter:title"       content="Solicita tu Cita | Odontoidalia">
-  <meta name="twitter:description" content="Agenda tu cita en Odontoidalia, clínica dental en Tampico. Elige fecha y hora y te contactamos.">
+  <meta name="twitter:description" content="Agenda tu cita en Odontoidalia, clínica dental en Tampico. Selecciona día y hora directamente.">
   <meta name="twitter:image"       content="https://copernicioa.github.io/clinica-dental/assets/og-image.jpg">
 
   <!-- Google Fonts -->
@@ -37,7 +37,7 @@
     }
     .logo img { height:48px; }
 
-    /* Navegación escritorio */
+    /* Desktop nav */
     .desktop-menu { display:flex; gap:24px; }
     .desktop-menu a {
       color:#fff; text-transform:uppercase; text-decoration:none;
@@ -57,7 +57,7 @@
       display:block; height:3px; background:#fff; border-radius:2px;
     }
 
-    /* Menú móvil */
+    /* Mobile menu */
     .mobile-menu {
       display:none; flex-direction:column; background:#40E0D0;
       position:absolute; top:100%; left:0; width:100%; padding:16px;
@@ -70,7 +70,7 @@
     }
     .mobile-menu a:last-child { margin-bottom:0; }
 
-    /* Mostrar/ocultar móvil */
+    /* Mostrar/ocultar mobile */
     #menu-toggle:checked ~ .mobile-menu { display:flex; }
 
     /* Responsividad */
@@ -79,37 +79,22 @@
       .hamburger   { display:flex; }
     }
 
-    /* Main - formulario de cita */
-    main {
-      max-width:600px; margin:32px auto; padding:0 16px;
-    }
+    /* Sección de citas */
     #citas-header {
-      text-align:center; margin-bottom:24px;
+      text-align:center; margin:32px auto 16px;
+      max-width:700px; padding:0 16px;
     }
     #citas-header h1 {
-      font-size:2rem; color:#6c63ff;
+      font-size:2rem; color:#6c63ff; margin-bottom:8px;
     }
-    form {
-      background:#fff; padding:24px; border-radius:12px;
-      box-shadow:0 4px 12px rgba(0,0,0,0.07); display:flex;
-      flex-direction:column; gap:16px;
+    #citas-header p {
+      margin-bottom:24px; font-size:1rem;
     }
-    form label {
-      font-weight:500; margin-bottom:4px; color:#333;
+
+    /* Calendly widget */
+    #calendly-scheduler {
+      max-width:700px; margin:0 auto 48px; padding:0 16px;
     }
-    form input, form select, form textarea {
-      padding:12px; border:1px solid #ccc; border-radius:8px;
-      font-size:1rem;
-    }
-    form input:focus, form select:focus, form textarea:focus {
-      outline:none; border-color:#6c63ff;
-    }
-    form button {
-      padding:12px; background:linear-gradient(145deg,#00b4d8,#6c63ff);
-      color:#fff; font-weight:600; border:none; border-radius:30px;
-      cursor:pointer; font-size:1rem; transition:transform .3s;
-    }
-    form button:hover { transform:scale(1.05); }
 
     /* Footer */
     footer {
@@ -129,9 +114,12 @@
     .chat-float img { width:32px; height:32px; }
   </style>
 </head>
+
 <body>
   <header role="banner">
-    <div class="logo"><img src="assets/logo.png" alt="Odontoidalia"></div>
+    <div class="logo">
+      <img src="assets/logo.png" alt="Odontoidalia">
+    </div>
 
     <!-- Toggle móvil -->
     <input type="checkbox" id="menu-toggle">
@@ -158,40 +146,26 @@
     </nav>
   </header>
 
-  <main>
+  <main role="main">
     <section id="citas-header">
-      <h1>Solicita tu Cita</h1>
-      <p>Elige día y hora, y nos pondremos en contacto contigo.</p>
+      <h1>Agenda tu Cita</h1>
+      <p>Selecciona día y hora, la Dra. recibirá tu reserva en su Google Calendar:</p>
     </section>
 
-    <form action="mailto:dentalia1910@gmail.com" method="post" enctype="text/plain">
-      <div>
-        <label for="nombre">Nombre completo</label>
-        <input type="text" id="nombre" name="nombre" required>
-      </div>
-      <div>
-        <label for="email">Correo electrónico</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-      <div>
-        <label for="fecha">Fecha de la cita</label>
-        <input type="date" id="fecha" name="fecha" required>
-      </div>
-      <div>
-        <label for="hora">Hora aproximada</label>
-        <input type="time" id="hora" name="hora" required>
-      </div>
-      <div>
-        <label for="mensaje">Comentarios</label>
-        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Indica si es tu primera visita..." ></textarea>
-      </div>
-      <button type="submit">Enviar Solicitud</button>
-    </form>
+    <!-- Calendly inline widget -->
+    <section id="calendly-scheduler">
+      <div
+        class="calendly-inline-widget"
+        data-url="https://calendly.com/clinicaodontoidalia/cita-odontologia-general"
+        style="min-width:320px; height:650px;"
+      ></div>
+      <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    </section>
   </main>
 
   <footer role="contentinfo">
     <p>© 2025 Odontoidalia | Tampico, México</p>
-    <p>Segunda avenida #1109-A, Col. Jardín 20 de Noviembre · dentalia1910@gmail.com · +52 833 309 1349</p>
+    <p>Segunda avenida #1109-A, Col. Jardín 20 de Noviembre · dentalia1910@gmail.com · +52 833 209 1349</p>
   </footer>
 
   <a href="https://wa.me/528332091349?text=Hola%20quiero%20una%20cita" class="chat-float" target="_blank">
